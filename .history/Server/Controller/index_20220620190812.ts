@@ -22,4 +22,4 @@ export function DisplayContactPage(req: express.Request, res: express.Response, 
 {
     res.render('index', { title: 'Contact Me', page: 'contact',displayName:UserDisplayName(req) });
 }
-
+//temp

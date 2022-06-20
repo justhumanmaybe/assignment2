@@ -8,6 +8,6 @@ export function DisplayBusinessContactPage(req: express.Request, res: express.Re
             console.error(err);
             res.end(err);
         }
-        res.render('index',{title:'Business Contact', page:'business_contact', business_contact: businessContactCollection, displayName: UserDisplayName(req)});
+        res.render('index',{title:'Business Contact', page:'business_contact', business_contact: businessContactCollection, displayName:''});
     });
 }

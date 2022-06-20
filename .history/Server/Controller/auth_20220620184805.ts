@@ -15,7 +15,7 @@ export function DisplayLoginPage(req: express.Request, res: express.Response, ne
     {
         return res.render('index', {title: "Login", page: "login", messages: req.flash("loginMessage"), displayName: UserDisplayName(req)});
     }
-    return res.redirect('/business_contact');
+    return res.redirect('/movie-list');
 }
 
 export function DisplayRegisterPage(req: express.Request, res: express.Response, next: express.NextFunction) 
@@ -24,7 +24,7 @@ export function DisplayRegisterPage(req: express.Request, res: express.Response,
     {
         return res.render('index', {title: "Register", page: "register", messages: req.flash("registerMessage"), displayName:  UserDisplayName(req)});
     }
-    return res.redirect('/business_contact');
+    return res.redirect('/movie-list');
 }
 
 /* Processing Functions */
@@ -56,7 +56,7 @@ export function ProcessLoginPage(req: express.Request, res: express.Response, ne
                 res.end(err);
             }
 
-            return res.redirect('/business_contact');
+            return res.redirect('/movie-list');
         });
     })(req, res, next);
 }
@@ -94,7 +94,7 @@ export function ProcessRegisterPage(req: express.Request, res: express.Response,
         // automatically login the user
         return passport.authenticate('local')(req, res, function()
         {
-            return res.redirect('/business_contact');
+            return res.redirect('/movie-list');
         });
     });
 }
