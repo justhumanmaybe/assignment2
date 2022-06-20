@@ -1,6 +1,3 @@
-/*Name:Anson Ng
-  Student ID: 301202061
-  Date: 6/12/2022 */
 "use strict";
 (function () {
     function Start() {

@@ -1,7 +1,4 @@
 #!/usr/bin/env node
-/*Name:Anson Ng
-  Student ID: 301202061
-  Date: 6/12/2022 */
 "use strict";
 var __importDefault = (this && this.__importDefault) || function (mod) {
     return (mod && mod.__esModule) ? mod : { "default": mod };
@@ -9,7 +6,7 @@ var __importDefault = (this && this.__importDefault) || function (mod) {
 Object.defineProperty(exports, "__esModule", { value: true });
 const app_1 = __importDefault(require("./Server/Config/app"));
 const debug_1 = __importDefault(require("debug"));
-(0, debug_1.default)('lesson4 week4:server');
+(0, debug_1.default)('assignment2');
 const http_1 = __importDefault(require("http"));
 const port = normalizePort(process.env.PORT || '3000');
 app_1.default.set('port', port);
