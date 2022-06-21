@@ -24,10 +24,6 @@ export function ProcessAddPage(req: express.Request, res: express.Response, next
 {
 
 }
-export function ProcessEditPage(req: express.Request, res: express.Response, next: express.NextFunction)
-{
-
-}
 export function ProcessDeletePage(req: express.Request, res: express.Response, next: express.NextFunction)
 {
 
