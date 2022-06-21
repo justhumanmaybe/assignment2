@@ -44,10 +44,10 @@ let localStrategy = passport_local_1.default.Strategy;
 const user_1 = __importDefault(require("../Models/user"));
 var app = (0, express_1.default)();
 const DBConfig = __importStar(require("./db"));
-mongoose_1.default.connect(DBConfig.RemoteURI);
+mongoose_1.default.connect(DBConfig.RemoteURI || DBConfig.LocalURI);
 const db = mongoose_1.default.connection;
 db.on("open", function () {
-    console.log(`Connected to MongoDB at: ${DBConfig.HostName}`);
+    console.log(`Connected to MongoDB at: ${(DBConfig.RemoteURI) ? DBConfig.HostName : "LocalHost"} `);
 });
 db.on("error", function () {
     console.log(`Connection Error`);
